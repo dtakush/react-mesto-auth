@@ -1,0 +1,7 @@
+.popup__container_card {
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

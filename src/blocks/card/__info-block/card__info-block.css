@@ -1,0 +1,8 @@
+.card__info-block {
+    min-width: 246px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0 30px;
+}

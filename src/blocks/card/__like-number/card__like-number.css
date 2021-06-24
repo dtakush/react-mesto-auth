@@ -1,0 +1,12 @@
+.card__like-number {
+    font-size: 0.8rem;
+    font-weight: 200;
+    color: black;
+    text-align: center;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin: 3px 0 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}

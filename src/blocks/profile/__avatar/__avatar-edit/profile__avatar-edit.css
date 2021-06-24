@@ -1,0 +1,14 @@
+.profile__avatar-edit {
+    width: 100%;
+    min-height: 100%;
+    background-color: rgb(0, 0, 0, .8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 1s ease-in-out;
+}
+
+.profile__avatar-edit:hover {
+    opacity: 1;
+}

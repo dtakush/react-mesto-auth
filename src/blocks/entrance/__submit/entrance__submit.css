@@ -1,0 +1,11 @@
+.entrance__submit{
+    width: 100%;
+    height: 50px;
+    border: 0;
+    border-radius: 2px;
+    margin-top: 216px;
+    color: #000;
+    background-color: #fff;
+    cursor: pointer;
+    transition: 1s ease-in-out;
+}
