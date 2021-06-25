@@ -70,7 +70,6 @@ function App() {
         .then((res) => {
             if(res && res.token) {
                 tokenCheck();
-                console.log(currentUser);
             } else {
                 handleIsTooltipPopupOpen();
             }
@@ -122,14 +121,17 @@ function App() {
 
     //Запрос информации пользователя
     React.useEffect(() => {
-        api.getUserInfo()
-        .then((userInfo) => {
+        if(loggedIn) {
+            api.getUserInfo()
+            .then((userInfo) => {
             setCurrentUser(userInfo);
-        })
-        .catch((err) => {
+            })
+            .catch((err) => {
             console.log(`Attention! ${err}`);
-         });
-    }, []);
+            });
+        }
+        
+    }, [loggedIn]);
 
 
     //Открытие попапа проваленой регистрации
@@ -204,14 +206,16 @@ function App() {
 
      //Запрос карточек
      React.useEffect(() => {
-        api.getInitialCards()
-        .then((cards) => {     
-            setCards(cards);
-        })
-        .catch((err) => {
-            console.log(`Attention! ${err}`);
-        });
-    }, []);
+         if(loggedIn) {
+            api.getInitialCards()
+            .then((cards) => {     
+                setCards(cards);
+            })
+            .catch((err) => {
+                console.log(`Attention! ${err}`);
+            });
+         }
+    }, [loggedIn]);
 
 
     //Постановка и удаление лайка
